@@ -2,11 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94d1d574-5c23-4df0-80e9-ed9ccd9efd6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NavBar/NavBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NavBar/Navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/Api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Spiner/Spiner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/Todo/Todo.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/Todo/TodoContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/Todo/TodosConteiner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/Todo/component/List/List.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/Todo/component/List/List.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AboutPage/AboutPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/TodoItemPage/TodoItemPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/titleReduser/titleReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/rootReducer/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/todosReducer/todosReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/todosReducer/todosReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +39,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1pA4eRPGeraJdY3qrNhghq93dqm" />
@@ -29,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux/titleReduser" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -41,6 +63,19 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/redux/titleReduser" />
+      <recent name="$PROJECT_DIR$/src/NavBar" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/redux" />
+      <recent name="$PROJECT_DIR$/src/pages/MainPage" />
+      <recent name="$PROJECT_DIR$/src/pages/AboutPage" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -65,7 +100,13 @@
       <option name="presentableId" value="Default" />
       <updated>1614612656037</updated>
       <workItem from="1614612666138" duration="847000" />
-      <workItem from="1614613548799" duration="4264000" />
+      <workItem from="1614613548799" duration="4326000" />
+      <workItem from="1614875182269" duration="1026000" />
+      <workItem from="1614876237984" duration="4903000" />
+      <workItem from="1614962162419" duration="7854000" />
+      <workItem from="1614973282911" duration="1910000" />
+      <workItem from="1615050745462" duration="4129000" />
+      <workItem from="1615055004438" duration="4834000" />
     </task>
     <task id="LOCAL-00001" summary="init redux">
       <created>1614617584062</created>
@@ -74,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614617584062</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add eslint">
+      <created>1614617831229</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1614617831229</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,7 +133,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -93,6 +143,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init redux" />
-    <option name="LAST_COMMIT_MESSAGE" value="init redux" />
+    <MESSAGE value="add eslint" />
+    <option name="LAST_COMMIT_MESSAGE" value="add eslint" />
   </component>
 </project>
