@@ -12,13 +12,9 @@ function List({ todos, deleteTodo }) {
   // const onItemClick = (todo) => () => {
   //   history.push(`/todoitem${todo._id}`);
   // };
-  const onDeleteTodo = (id) => {
-    // eslint-disable-next-line react/prop-types,no-unused-vars
-    const findeIndexlement = todos.findIndex((todo) => todo.id === id);
-    const newtodos = todos;
-    newtodos.splice(findeIndexlement, 1);
-    deleteTodo(newtodos);
-  };
+  // const onDeleteTodo = (id) => {
+  //   deleteTodo(id);
+  // };
 
   return (
     <ul className="list-group list-group-flush">
@@ -53,7 +49,8 @@ function List({ todos, deleteTodo }) {
                 <button
                   className={classNames("btn-danger", style.button)}
                   onClick={() => {
-                    onDeleteTodo(todo.id);
+                    // onDeleteTodo(todo.id);
+                    deleteTodo(todo.id);
                   }}
                 >
                   {" "}

@@ -13,10 +13,10 @@ export const addTodo = (todo) => (dispatch) => {
     todo: todo,
   });
 };
-export const deleteTodo = (newtodos) => (dispatch) => {
+export const deleteTodo = (id) => (dispatch) => {
   dispatch({
     type: DELETE_TODO,
-    preload: newtodos,
+    preload: id,
   });
 };
 
@@ -27,7 +27,9 @@ export default (state = initialState, action) => {
       return [...state, action.todo];
     }
     case DELETE_TODO: {
-      return (state = [...action.preload]);
+      const todos = [...state];
+      const newTodo = todos.filter((todo) => todo.id !== action.preload);
+      return [...newTodo];
     }
     default:
       return state;
