@@ -19,7 +19,7 @@ function App() {
             <Route path="/about">
               <AboutPage />
             </Route>
-            <Route path="/todoitem">
+            <Route path="/todoitem/:id">
               <TodoItemPage />
             </Route>
             <Route exact path="/">

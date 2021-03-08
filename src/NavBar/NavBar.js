@@ -60,7 +60,7 @@ function NavBar() {
         >
           <ul className="navbar-nav ml-auto">
             <li className="nav-item active">
-              <Link to="/todoitem" className="nav-link">
+              <Link to="/todoitem/:id" className="nav-link">
                 {" "}
                 <span className="image">
                   {" "}

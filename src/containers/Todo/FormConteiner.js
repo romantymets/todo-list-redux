@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { addTodo as addTodoAction } from "../../redux/todosReducer/todosReducer";
 import { changeTitle as changeNewTitle } from "../../redux/titleReduser/titleReducer";
 import List from "./component/List/List";
+import Footer from "./component/Footer/Footer";
 
 // eslint-disable-next-line react/prop-types
 function TodosContainer({ changeTitle, title, todos, addTodo }) {
@@ -44,7 +45,7 @@ function TodosContainer({ changeTitle, title, todos, addTodo }) {
         Load more
       </button>
       <List />
-      <footer></footer>
+      <Footer />
     </div>
   );
 }

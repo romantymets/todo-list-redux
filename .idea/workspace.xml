@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94d1d574-5c23-4df0-80e9-ed9ccd9efd6d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/containers/Todo/component/Footer/Footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/NavBar/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Todo/Todo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Todo/Form.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Todo/TodosConteiner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Todo/FormConteiner.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Todo/component/List/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Todo/component/List/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/TodoItemPage/TodoItemPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TodoItemPage/TodoItemPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/todosReducer/todosReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/todosReducer/todosReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../todo-hooks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/containers/Todo/component/Footer" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -46,17 +53,17 @@
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/redux" />
-      <recent name="$PROJECT_DIR$/src/pages/MainPage" />
-      <recent name="$PROJECT_DIR$/src/pages/AboutPage" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/containers/Todo/component/Footer" />
       <recent name="$PROJECT_DIR$/src/redux/deleteTodoReduser" />
       <recent name="$PROJECT_DIR$/src/redux/titleReduser" />
       <recent name="$PROJECT_DIR$/src/NavBar" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/redux" />
+      <recent name="$PROJECT_DIR$/src/pages/MainPage" />
+      <recent name="$PROJECT_DIR$/src/pages/AboutPage" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -91,7 +98,8 @@
       <workItem from="1615055004438" duration="4969000" />
       <workItem from="1615113849507" duration="4163000" />
       <workItem from="1615127455739" duration="9626000" />
-      <workItem from="1615147070395" duration="2864000" />
+      <workItem from="1615147070395" duration="2981000" />
+      <workItem from="1615192928774" duration="7885000" />
     </task>
     <task id="LOCAL-00001" summary="init redux">
       <created>1614617584062</created>
@@ -128,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615136953187</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor code">
+      <created>1615150023650</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1615150023650</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +168,7 @@
     <MESSAGE value="add newTools" />
     <MESSAGE value="added todos reducer and refactor code" />
     <MESSAGE value="delete todo" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete todo" />
+    <MESSAGE value="refactor code" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor code" />
   </component>
 </project>

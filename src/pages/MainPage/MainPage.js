@@ -1,10 +1,10 @@
 import React from "react";
-import TodosContainer from "../../containers/Todo/TodosConteiner";
+import FormContainer from "../../containers/Todo/FormConteiner";
 
 const MainPage = () => {
   return (
     <div>
-      <TodosContainer />
+      <FormContainer />
     </div>
   );
 };

@@ -1,20 +1,22 @@
 import React from "react";
 import { compose } from "redux";
 import { connect } from "react-redux";
-// import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import classNames from "classnames";
 import style from "./List.module.css";
 import { deleteTodo as deleteOldTodo } from "../../../../redux/todosReducer/todosReducer";
-
+import { checkTodo as itemCheckTodo } from "../../../../redux/todosReducer/todosReducer";
 // eslint-disable-next-line react/prop-types
-function List({ todos, deleteTodo }) {
-  // const history = useHistory();
-  // const onItemClick = (todo) => () => {
-  //   history.push(`/todoitem${todo._id}`);
-  // };
-  // const onDeleteTodo = (id) => {
-  //   deleteTodo(id);
-  // };
+function List({ todos, deleteTodo, checkTodo }) {
+  const history = useHistory();
+  const onItemClick = (todo) => () => {
+    history.push(`/todoitem/${todo.id}`, todo.title);
+  };
+  const onItemCheck = (id) => (e) => {
+    const checked = e.target.checked;
+    // eslint-disable-next-line no-unused-vars
+    checkTodo(id, checked);
+  };
 
   return (
     <ul className="list-group list-group-flush">
@@ -26,7 +28,7 @@ function List({ todos, deleteTodo }) {
             `${todo.completed ? style.doneTodo : null}`
           )}
           key={todo.id}
-          // onClick={onItemClick(todo)}
+          onClick={onItemClick(todo)}
         >
           <div className="container">
             <div
@@ -40,7 +42,10 @@ function List({ todos, deleteTodo }) {
                   type="checkbox"
                   checked={todo.completed}
                   className={style.checkboxContainer}
-                  // onChange={onItemCheck(todo.id)}
+                  onChange={onItemCheck(todo.id)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
                 />
               </div>
               <div className="col-1"> {index + 1}</div>
@@ -48,8 +53,8 @@ function List({ todos, deleteTodo }) {
               <div className="col-1">
                 <button
                   className={classNames("btn-danger", style.button)}
-                  onClick={() => {
-                    // onDeleteTodo(todo.id);
+                  onClick={(e) => {
+                    e.stopPropagation();
                     deleteTodo(todo.id);
                   }}
                 >
@@ -72,6 +77,7 @@ export default compose(
     }),
     {
       deleteTodo: deleteOldTodo,
+      checkTodo: itemCheckTodo,
     }
   )
 )(List);
