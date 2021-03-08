@@ -17,13 +17,13 @@ export const addTodo = (todo) => (dispatch) => {
 export const deleteTodo = (id) => (dispatch) => {
   dispatch({
     type: DELETE_TODO,
-    preload: id,
+    id: id,
   });
 };
 export const checkTodo = (id, checked) => (dispatch) => {
   dispatch({
     type: CHECK_TODO,
-    preload: id,
+    id: id,
     eventChecked: checked,
   });
 };
@@ -35,17 +35,15 @@ export default (state = initialState, action) => {
       return [...state, action.todo];
     }
     case DELETE_TODO: {
-      const todos = [...state];
-      const newTodo = todos.filter((todo) => todo.id !== action.preload);
+      const newTodo = state.filter((todo) => todo.id !== action.id);
       return [...newTodo];
     }
     case CHECK_TODO: {
-      const todos = [...state];
       console.log(action);
-      const currentTodo = todos.find((todo) => todo.id === action.preload);
+      const currentTodo = state.find((todo) => todo.id === action.id);
       currentTodo.completed = action.eventChecked;
-      const newTodo = todos.map((todo) =>
-        todo.id === action.preload ? currentTodo : todo
+      const newTodo = state.map((todo) =>
+        todo.id === action.id ? currentTodo : todo
       );
       return [...newTodo];
     }
