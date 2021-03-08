@@ -24,7 +24,7 @@ export const checkTodo = (id, checked) => (dispatch) => {
   dispatch({
     type: CHECK_TODO,
     id: id,
-    eventChecked: checked,
+    completed: checked,
   });
 };
 
@@ -39,9 +39,8 @@ export default (state = initialState, action) => {
       return [...newTodo];
     }
     case CHECK_TODO: {
-      console.log(action);
       const currentTodo = state.find((todo) => todo.id === action.id);
-      currentTodo.completed = action.eventChecked;
+      currentTodo.completed = action.completed;
       const newTodo = state.map((todo) =>
         todo.id === action.id ? currentTodo : todo
       );
