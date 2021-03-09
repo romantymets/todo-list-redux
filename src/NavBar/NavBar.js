@@ -31,10 +31,7 @@ function NavBar() {
 
   return (
     <div className="container">
-      <nav
-        className="navbar navbar-expand-md navbar-light bg-white"
-        ref={wrapperRef}
-      >
+      <nav className="navbar navbar-expand-md" ref={wrapperRef}>
         <Link to="/" className="navbar-brand">
           {" "}
           MyTODO{" "}
@@ -66,7 +63,7 @@ function NavBar() {
                   {" "}
                   <RiMastodonLine />
                 </span>
-                <span> TodoItem</span>
+                <span className="textColor"> TodoItem</span>
                 <span className="sr-only">(current)</span>
               </Link>
             </li>
@@ -76,7 +73,7 @@ function NavBar() {
                 <span className="image">
                   <FaAngular />{" "}
                 </span>{" "}
-                <span> About</span>
+                <span className="textColor"> About</span>
                 <span className="sr-only">(current)</span>
               </Link>
             </li>
@@ -86,7 +83,8 @@ function NavBar() {
                 <span className="image">
                   <FaHome />{" "}
                 </span>{" "}
-                <span> Home</span> <span className="sr-only">(current)</span>
+                <span className="textColor"> Home</span>{" "}
+                <span className="sr-only">(current)</span>
               </Link>
             </li>
           </ul>

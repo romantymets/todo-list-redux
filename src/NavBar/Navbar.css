@@ -1,6 +1,7 @@
 .nav-item{
     text-transform: uppercase;
     margin-left: 50px;
+    text-decoration-color: #f8f9fa;
 }
 
 .nav-item:hover {
@@ -8,8 +9,22 @@
     transform: translate(10px);
     transition-duration: 0.5s;
     border-radius: 5px;
+    color: grey;
 }
 .image{
     font-size: 120%;
 }
 
+/*.image:hover{*/
+/*    color: black;*/
+/*}*/
+
+.navbar {
+    background: none;
+}
+.textColor{
+
+}
+.textColor:hover{
+
+}

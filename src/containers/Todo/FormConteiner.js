@@ -6,6 +6,8 @@ import { addTodo as addTodoAction } from "../../redux/todosReducer/todosReducer"
 import { changeTitle as changeNewTitle } from "../../redux/titleReduser/titleReducer";
 import List from "./component/List/List";
 import Footer from "./component/Footer/Footer";
+import classNames from "classnames";
+import style from "./Form.module.css";
 
 // eslint-disable-next-line react/prop-types
 function TodosContainer({ changeTitle, title, todos, addTodo }) {
@@ -23,10 +25,10 @@ function TodosContainer({ changeTitle, title, todos, addTodo }) {
     changeTitle("");
   };
   return (
-    <div className="container">
+    <div className={classNames("container", style.todoContainer)}>
       <form className="container" onSubmit={addNewTodo}>
         <div className="form-group">
-          <h2> Enter Todo </h2>
+          <h3> In progress </h3>
           <input
             type="text"
             className="form-control"
@@ -37,13 +39,10 @@ function TodosContainer({ changeTitle, title, todos, addTodo }) {
           />
           <br />
           <button type="submit" className="btn btn-primary">
-            Add todo
+            {"+"} Add new card
           </button>
         </div>
       </form>
-      <button type="submit" className="btn btn-primary">
-        Load more
-      </button>
       <List />
       <Footer />
     </div>

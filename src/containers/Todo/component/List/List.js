@@ -19,25 +19,33 @@ function List({ todos, deleteTodo, checkTodo }) {
   };
 
   return (
-    <ul className="list-group list-group-flush">
+    <diV>
+      {/*<ul className="list-group list-group-flush">*/}
       {/* eslint-disable-next-line react/prop-types */}
       {todos.map((todo, index) => (
-        <li
-          className={classNames(
-            style.listItem,
-            `${todo.completed ? style.doneTodo : null}`
-          )}
-          key={todo.id}
-          onClick={onItemClick(todo)}
-        >
-          <div className="container">
+        <div className={classNames("card", style.listItem)} key={todo.id}>
+          <div className={classNames("card-header", style.header)}>
+            {index + 1} Card
+            <span
+              className={classNames(style.button)}
+              onClick={(e) => {
+                e.stopPropagation();
+                deleteTodo(todo.id);
+              }}
+            >
+              {" "}
+              X{" "}
+            </span>
+          </div>
+          <div className="card-body">
             <div
               className={classNames(
-                "row",
+                "card-title",
+                style.titleBody,
                 `${todo.completed ? style.doneTodo : null}`
               )}
             >
-              <div className="col-1">
+              <div className={style.titleText}>
                 <input
                   type="checkbox"
                   checked={todo.completed}
@@ -47,26 +55,16 @@ function List({ todos, deleteTodo, checkTodo }) {
                     e.stopPropagation();
                   }}
                 />
-              </div>
-              <div className="col-1"> {index + 1}</div>
-              <div className="col-9"> {todo.title}</div>
-              <div className="col-1">
-                <button
-                  className={classNames("btn-danger", style.button)}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    deleteTodo(todo.id);
-                  }}
-                >
+                <span onClick={onItemClick(todo)} className="h6">
                   {" "}
-                  X
-                </button>
+                  {todo.title}
+                </span>
               </div>
             </div>
           </div>
-        </li>
+        </div>
       ))}
-    </ul>
+    </diV>
   );
 }
 
