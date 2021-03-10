@@ -1,16 +1,20 @@
-.nav-item{
+.nav-item {
     text-transform: uppercase;
     margin-left: 50px;
     text-decoration-color: #f8f9fa;
 }
+.nav-item span {
+    color: rgb(244, 237, 251);
+}
 
 .nav-item:hover {
-   background-color: #ebecf0;
+   background-color: rgba(50, 53, 33, 0.44);
     transform: translate(10px);
     transition-duration: 0.5s;
     border-radius: 5px;
-    color: grey;
+    color:black;
 }
+
 .image{
     font-size: 120%;
 }
@@ -27,4 +31,17 @@
 }
 .textColor:hover{
 
+}
+.navbar-brand{
+    color: white;
+}
+.navbar-brand:hover {
+    color: black;
+}
+
+.navbar-toggler{
+background-image: none;
+}
+.navbar-toggler-icon{
+ background-image: none;
 }

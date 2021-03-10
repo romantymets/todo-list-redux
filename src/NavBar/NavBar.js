@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaHome, FaAngular } from "react-icons/fa";
 import { FcTodoList } from "react-icons/fc";
 import { RiMastodonLine } from "react-icons/ri";
+import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.css";
 
 function NavBar() {
@@ -31,7 +32,7 @@ function NavBar() {
 
   return (
     <div className="container">
-      <nav className="navbar navbar-expand-md" ref={wrapperRef}>
+      <nav className="navbar navbar-expand-md " ref={wrapperRef}>
         <Link to="/" className="navbar-brand">
           {" "}
           MyTODO{" "}
@@ -49,7 +50,10 @@ function NavBar() {
           aria-label="Toggle navigation"
           onClick={onButtonClick}
         >
-          <span className="navbar-toggler-icon"> </span>
+          <span className="image">
+            {" "}
+            <GiHamburgerMenu />
+          </span>
         </button>
         <div
           className={`collapse navbar-collapse ${showBar ? "show" : null}`}
