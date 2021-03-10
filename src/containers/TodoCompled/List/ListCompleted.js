@@ -4,10 +4,10 @@ import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
 import classNames from "classnames";
 import style from "./List.module.css";
-import { deleteTodo as deleteOldTodo } from "../../../../redux/todosReducer/todosReducer";
-import { checkTodo as itemCheckTodo } from "../../../../redux/todosReducer/todosReducer";
+import { deleteTodo as deleteOldTodo } from "../../../redux/todosReducer/todosReducer";
+import { checkTodo as itemCheckTodo } from "../../../redux/todosReducer/todosReducer";
 // eslint-disable-next-line react/prop-types
-function List({ todos, deleteTodo, checkTodo }) {
+function ListCompleted({ todos, deleteTodo, checkTodo }) {
   const history = useHistory();
   const onItemClick = (todo) => () => {
     history.push(`/todoitem/${todo.id}`, todo.title);
@@ -24,7 +24,7 @@ function List({ todos, deleteTodo, checkTodo }) {
       {/* eslint-disable-next-line react/prop-types */}
       {todos
         // eslint-disable-next-line react/prop-types
-        .filter((todo) => !todo.completed)
+        .filter((todo) => todo.completed)
         .map((todo, index) => (
           <div className={classNames("card", style.listItem)} key={todo.id}>
             <div className={classNames("card-header", style.header)}>
@@ -81,4 +81,4 @@ export default compose(
       checkTodo: itemCheckTodo,
     }
   )
-)(List);
+)(ListCompleted);
