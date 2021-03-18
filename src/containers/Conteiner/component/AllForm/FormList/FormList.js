@@ -2,33 +2,32 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { compose } from "redux";
 import { connect } from "react-redux";
-import { addTodo as addTodoAction } from "../../redux/todosReducer/todosReducer";
-import { changeTitle as changeNewTitle } from "../../redux/titleReduser/titleReducer";
-import List from "./component/List/List";
-import Footer from "./component/Footer/Footer";
+// import { addTodo as addTodoAction } from "../../../../redux/todosReducer/todosReducer";
+import { changeTitle as changeNewTitle } from "../../../../../redux/titleReduser/titleReducer";
+import { addNewList as addNewListAction } from "../../../../../redux/ListItemsReducer/ListItemReducer";
 import classNames from "classnames";
-import style from "./Form.module.css";
+import style from "./FormList.module.css";
 
 // eslint-disable-next-line react/prop-types
-function TodosContainer({ changeTitle, title, todos, addTodo }) {
+function FormList({ changeTitle, title, todos, addNewList }) {
   const oninputText = (e) => {
     const text = e.target.value;
     changeTitle(text);
   };
-  const addNewTodo = (e) => {
+  const createList = (e) => {
     e.preventDefault();
-    addTodo({
-      title: title,
-      id: uuidv4(),
-      completed: false,
+    addNewList({
+      [uuidv4()]: {
+        name: title,
+        items: [],
+      },
     });
     changeTitle("");
   };
   return (
     <div className={classNames("container", style.todoContainer)}>
-      <form className="container" onSubmit={addNewTodo}>
+      <form className="container" onSubmit={createList}>
         <div className="form-group">
-          <h3> In progress </h3>
           <input
             type="text"
             className="form-control"
@@ -43,8 +42,6 @@ function TodosContainer({ changeTitle, title, todos, addTodo }) {
           </button>
         </div>
       </form>
-      <List />
-      <Footer />
     </div>
   );
 }
@@ -54,10 +51,11 @@ export default compose(
     (state) => ({
       title: state.title,
       todos: state.todos,
+      listItems: state.listItems,
     }),
     {
       changeTitle: changeNewTitle,
-      addTodo: addTodoAction,
+      addNewList: addNewListAction,
     }
   )
-)(TodosContainer);
+)(FormList);
