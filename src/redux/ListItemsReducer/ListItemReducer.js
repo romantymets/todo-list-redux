@@ -9,10 +9,20 @@ export const DELETE_LIST = `${ROOT_PREFIX}DELETE_LIST`;
 export const ADD_TODO = `${ROOT_PREFIX}ADD_TODO`;
 export const DELETE_TODO = `${ROOT_PREFIX}DELETE_TODO`;
 export const CHECK_TODO = `${ROOT_PREFIX}CHECK_TODO`;
+export const ONDRAG_END = `${ROOT_PREFIX}ONDRAG_END`;
+
 export const addNewList = (list) => (dispatch) => {
   dispatch({
     type: ADD_NEWLIST,
     list: list,
+  });
+};
+
+export const dragEnd = (result, colums) => (dispatch) => {
+  dispatch({
+    type: ONDRAG_END,
+    result,
+    colums,
   });
 };
 
@@ -67,6 +77,43 @@ export default (state = listItemsInitialState, action) => {
         ...state,
         [itemId]: newItem,
       };
+    }
+    case ONDRAG_END: {
+      const { result, colums } = action;
+      const { source, destination } = result;
+      if (source.droppableId !== destination.droppableId) {
+        const sourseColums = colums[source.droppableId];
+        const destColums = colums[destination.droppableId];
+        const sourseItem = [...sourseColums.todos];
+        const destItem = [...destColums.todos];
+        const [removed] = sourseItem.splice(source.index, 1);
+        destItem.splice(destination.index, 0, removed);
+        const newState = {
+          ...colums,
+          [source.droppableId]: {
+            ...sourseColums,
+            todos: sourseItem,
+          },
+          [destination.droppableId]: {
+            ...destColums,
+            todos: destItem,
+          },
+        };
+        return newState;
+      } else {
+        const column = colums[source.droppableId];
+        const copiedItem = [...column.todos];
+        const [removed] = copiedItem.splice(source.index, 1);
+        copiedItem.splice(destination.index, 0, removed);
+        const newState = {
+          ...colums,
+          [source.droppableId]: {
+            ...column,
+            todos: copiedItem,
+          },
+        };
+        return newState;
+      }
     }
     case DELETE_TODO: {
       const { todoId, itemId } = action;

@@ -4,13 +4,9 @@
     <list default="true" id="94d1d574-5c23-4df0-80e9-ed9ccd9efd6d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Conteiner/TodoListContiner/TodoListContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Conteiner/TodoListContiner/TodoListContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Conteiner/component/AllForm/FormList/FormList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Conteiner/component/AllForm/FormList/FormList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Conteiner/component/AllForm/FormTodoCard/FormTodoCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Conteiner/component/AllForm/FormTodoCard/FormTodoCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Conteiner/component/List/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Conteiner/component/List/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Conteiner/TodoListContiner/TodoListConteiner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Conteiner/TodoListContiner/TodoListConteiner.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Conteiner/component/List/List.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Conteiner/component/List/List.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/ListItemsReducer/ListItemReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ListItemsReducer/ListItemReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/rootReducer/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer/rootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/titleReduser/titleTodoReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/titleReduser/titleTodoReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/todosReducer/todosReducer.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +35,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test-todo" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -124,7 +120,7 @@
       <workItem from="1616084243165" duration="12618000" />
       <workItem from="1616096879875" duration="137000" />
       <workItem from="1616324543280" duration="5570000" />
-      <workItem from="1616346861341" duration="1899000" />
+      <workItem from="1616346861341" duration="8698000" />
     </task>
     <task id="LOCAL-00001" summary="init redux">
       <created>1614617584062</created>
@@ -224,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616096958016</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="reformat todo">
+      <created>1616349001207</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1616349001207</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +259,7 @@
     <MESSAGE value="update my todo" />
     <MESSAGE value="added done todo_list" />
     <MESSAGE value="rformat todo" />
-    <option name="LAST_COMMIT_MESSAGE" value="rformat todo" />
+    <MESSAGE value="reformat todo" />
+    <option name="LAST_COMMIT_MESSAGE" value="reformat todo" />
   </component>
 </project>

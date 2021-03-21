@@ -6,8 +6,18 @@
     margin: 20px ;
     width: 300px;
     min-height: 650px;
+    padding: 0 auto;
 }
-
+.droppableContainer{
+    padding: 0;
+    min-width: 300px;
+    border-radius: 5px;
+    min-height: 650px;
+    margin-left: -15px;
+}
+.dropContainer {
+    width: 100%;
+}
 .formContainer {
     display: flex;
     flex-direction: column;
@@ -31,4 +41,18 @@
 .list {
     display: flex;
     flex-direction: row;
+}
+
+.button{
+    border-radius: 20%;
+    display: flex;
+    justify-content: right;
+    cursor:pointer;
+    margin-left: 255px;
+    margin-top: -30px;
+
+}
+.button:hover {
+    transform: scale(1);
+    transition-duration: 1s;
 }

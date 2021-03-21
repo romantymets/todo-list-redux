@@ -5,54 +5,65 @@ import FormTodoCard from "../component/AllForm/FormTodoCard/FormTodoCard";
 import classNames from "classnames";
 import style from "./TodoListConteiner.module.css";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
-import { deleteList as deleteListAction } from "../../../redux/ListItemsReducer/ListItemReducer";
+import {
+  deleteList as deleteListAction,
+  dragEnd as dragEndAction,
+} from "../../../redux/ListItemsReducer/ListItemReducer";
 import List from "../component/List/List";
 
 // eslint-disable-next-line react/prop-types
-const TodoListContainer = ({ listItems = {}, deleteList }) => {
+const TodoListContainer = ({ listItems = {}, deleteList, dragEnd }) => {
+  const onDragEnd = (result, colums) => {
+    if (!result.destination) return;
+    dragEnd(result, colums);
+  };
+
   const colums = listItems;
   if (colums === {}) {
     return <div />;
   } else {
     return (
       <div className={style.list}>
-        <DragDropContext onDragEnd={(result) => console.log(result)}>
+        <DragDropContext
+          onDragEnd={(result) => {
+            onDragEnd(result, colums);
+          }}
+        >
           {Object.entries(colums).map(([id, column]) => {
             return (
               <div
                 key={id}
                 className={classNames("container", style.todoContainer)}
               >
-                <h2>
+                <h4>
                   {" "}
                   {column.name}{" "}
                   <span
+                    className={classNames(style.button)}
                     onClick={() => {
                       deleteList(id);
                     }}
                   >
                     {" "}
-                    X{" "}
+                    x{" "}
                   </span>{" "}
-                </h2>
+                </h4>
                 <div className="formTodo">
                   {" "}
                   <FormTodoCard itemId={id} />{" "}
                 </div>
-                <div>
+                <div className={style.dropContainer}>
                   <Droppable droppableId={id} key={id}>
                     {(provided, snapshot) => {
                       return (
                         <div
+                          className={style.droppableContainer}
                           ref={provided.innerRef}
                           {...provided.droppableProps}
                           style={{
                             background: snapshot.isDraggingOver
                               ? "lightblue"
-                              : "lightgrey",
-                            padding: 4,
-                            minHeight: 500,
-                            width: 250,
+                              : "#ebecf0",
                           }}
                         >
                           <List itemId={id} />
@@ -78,6 +89,7 @@ export default compose(
     }),
     {
       deleteList: deleteListAction,
+      dragEnd: dragEndAction,
     }
   )
 )(TodoListContainer);
