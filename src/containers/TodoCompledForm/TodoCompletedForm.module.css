@@ -1,0 +1,31 @@
+.todoContainer {
+    display: flex;
+    flex-direction: column;
+    background: #ebecf0;
+    width:400px;
+    border-radius: 10px;
+    justify-content: left;
+    margin-top: 50px ;
+    margin-right: 150px;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.buttonSubmit {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttonLoadMore {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}

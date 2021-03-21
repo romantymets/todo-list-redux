@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaHome, FaAngular } from "react-icons/fa";
 import { FcTodoList } from "react-icons/fc";
 import { RiMastodonLine } from "react-icons/ri";
+import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.css";
 
 function NavBar() {
@@ -31,10 +32,7 @@ function NavBar() {
 
   return (
     <div className="container">
-      <nav
-        className="navbar navbar-expand-md navbar-light bg-white"
-        ref={wrapperRef}
-      >
+      <nav className="navbar navbar-expand-md " ref={wrapperRef}>
         <Link to="/" className="navbar-brand">
           {" "}
           MyTODO{" "}
@@ -52,7 +50,10 @@ function NavBar() {
           aria-label="Toggle navigation"
           onClick={onButtonClick}
         >
-          <span className="navbar-toggler-icon"> </span>
+          <span className="image">
+            {" "}
+            <GiHamburgerMenu />
+          </span>
         </button>
         <div
           className={`collapse navbar-collapse ${showBar ? "show" : null}`}
@@ -66,7 +67,7 @@ function NavBar() {
                   {" "}
                   <RiMastodonLine />
                 </span>
-                <span> TodoItem</span>
+                <span className="textColor"> TodoItem</span>
                 <span className="sr-only">(current)</span>
               </Link>
             </li>
@@ -76,7 +77,7 @@ function NavBar() {
                 <span className="image">
                   <FaAngular />{" "}
                 </span>{" "}
-                <span> About</span>
+                <span className="textColor"> About</span>
                 <span className="sr-only">(current)</span>
               </Link>
             </li>
@@ -86,7 +87,8 @@ function NavBar() {
                 <span className="image">
                   <FaHome />{" "}
                 </span>{" "}
-                <span> Home</span> <span className="sr-only">(current)</span>
+                <span className="textColor"> Home</span>{" "}
+                <span className="sr-only">(current)</span>
               </Link>
             </li>
           </ul>
