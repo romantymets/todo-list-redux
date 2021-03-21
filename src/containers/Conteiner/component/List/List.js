@@ -4,19 +4,21 @@ import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
 import classNames from "classnames";
 import style from "./List.module.css";
-import { deleteTodo as deleteOldTodo } from "../../../../redux/todosReducer/todosReducer";
-import { checkTodo as itemCheckTodo } from "../../../../redux/todosReducer/todosReducer";
+import { deleteTodo as deleteOldTodo } from "../../../../redux/ListItemsReducer/ListItemReducer";
+import { checkTodo as itemCheckTodo } from "../../../../redux/ListItemsReducer/ListItemReducer";
 import { Draggable } from "react-beautiful-dnd";
 // eslint-disable-next-line react/prop-types
-function List({ todos, deleteTodo, checkTodo }) {
+function List({ itemId, listItems, deleteTodo, checkTodo }) {
+  const cardItem = listItems[itemId] || {};
+  const todos = cardItem.todos || [];
   const history = useHistory();
   const onItemClick = (todo) => () => {
     history.push(`/todoitem/${todo.id}`, todo.title);
   };
-  const onItemCheck = (id) => (e) => {
-    const checked = e.target.checked;
+  const onItemCheck = (todoId, itemId) => (e) => {
+    const completed = e.target.checked;
     // eslint-disable-next-line no-unused-vars
-    checkTodo(id, checked);
+    checkTodo(todoId, itemId, completed);
   };
 
   return (
@@ -50,7 +52,7 @@ function List({ todos, deleteTodo, checkTodo }) {
                     className={classNames(style.button)}
                     onClick={(e) => {
                       e.stopPropagation();
-                      deleteTodo(todo.id);
+                      deleteTodo(todo.id, itemId);
                     }}
                   >
                     {" "}
@@ -70,7 +72,7 @@ function List({ todos, deleteTodo, checkTodo }) {
                         type="checkbox"
                         checked={todo.completed}
                         className={style.checkboxContainer}
-                        onChange={onItemCheck(todo.id)}
+                        onChange={onItemCheck(todo.id, itemId)}
                         onClick={(e) => {
                           e.stopPropagation();
                         }}
@@ -94,7 +96,7 @@ function List({ todos, deleteTodo, checkTodo }) {
 export default compose(
   connect(
     (state) => ({
-      todos: state.todos,
+      listItems: state.listItems,
     }),
     {
       deleteTodo: deleteOldTodo,

@@ -5,10 +5,11 @@ export { titleTodoInitialState };
 export const CHANGE_TODOTITLE = "changeTodoTitle";
 
 // Action creators
-export const changeTodoTitle = (title) => (dispatch) => {
+export const changeTodoTitle = (title, itemId) => (dispatch) => {
   dispatch({
     type: CHANGE_TODOTITLE,
     title: title,
+    itemId,
   });
 };
 
@@ -16,7 +17,11 @@ export const changeTodoTitle = (title) => (dispatch) => {
 export default (state = titleTodoInitialState, action) => {
   switch (action.type) {
     case CHANGE_TODOTITLE: {
-      return action.title;
+      const { itemId, title } = action;
+      return {
+        ...state,
+        [itemId]: title,
+      };
     }
     default:
       return state;

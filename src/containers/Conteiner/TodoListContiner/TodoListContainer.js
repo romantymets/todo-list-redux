@@ -1,5 +1,4 @@
 import React from "react";
-import { v4 as uuidv4 } from "uuid";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import FormTodoCard from "../component/AllForm/FormTodoCard/FormTodoCard";
@@ -10,7 +9,7 @@ import { deleteList as deleteListAction } from "../../../redux/ListItemsReducer/
 import List from "../component/List/List";
 
 // eslint-disable-next-line react/prop-types
-const TodoListContainer = ({ listItems = {}, todos, deleteList }) => {
+const TodoListContainer = ({ listItems = {}, deleteList }) => {
   const colums = listItems;
   if (colums === {}) {
     return <div />;
@@ -21,7 +20,7 @@ const TodoListContainer = ({ listItems = {}, todos, deleteList }) => {
           {Object.entries(colums).map(([id, column]) => {
             return (
               <div
-                key={uuidv4()}
+                key={id}
                 className={classNames("container", style.todoContainer)}
               >
                 <h2>
@@ -38,7 +37,7 @@ const TodoListContainer = ({ listItems = {}, todos, deleteList }) => {
                 </h2>
                 <div className="formTodo">
                   {" "}
-                  <FormTodoCard />{" "}
+                  <FormTodoCard itemId={id} />{" "}
                 </div>
                 <div>
                   <Droppable droppableId={id} key={id}>
@@ -56,7 +55,7 @@ const TodoListContainer = ({ listItems = {}, todos, deleteList }) => {
                             width: 250,
                           }}
                         >
-                          <List />
+                          <List itemId={id} />
                           {provided.placeholder}
                         </div>
                       );
@@ -75,7 +74,6 @@ const TodoListContainer = ({ listItems = {}, todos, deleteList }) => {
 export default compose(
   connect(
     (state) => ({
-      todos: state.todos,
       listItems: state.listItems,
     }),
     {

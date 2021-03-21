@@ -2,14 +2,13 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { compose } from "redux";
 import { connect } from "react-redux";
-// import { addTodo as addTodoAction } from "../../../../redux/todosReducer/todosReducer";
 import { changeTitle as changeNewTitle } from "../../../../../redux/titleReduser/titleReducer";
 import { addNewList as addNewListAction } from "../../../../../redux/ListItemsReducer/ListItemReducer";
 import classNames from "classnames";
 import style from "./FormList.module.css";
 
 // eslint-disable-next-line react/prop-types
-function FormList({ changeTitle, title, todos, addNewList }) {
+function FormList({ changeTitle, title, addNewList }) {
   const oninputText = (e) => {
     const text = e.target.value;
     changeTitle(text);
@@ -19,7 +18,7 @@ function FormList({ changeTitle, title, todos, addNewList }) {
     addNewList({
       [uuidv4()]: {
         name: title,
-        items: [],
+        todos: [],
       },
     });
     changeTitle("");
@@ -50,7 +49,6 @@ export default compose(
   connect(
     (state) => ({
       title: state.title,
-      todos: state.todos,
       listItems: state.listItems,
     }),
     {
