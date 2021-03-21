@@ -1,15 +1,15 @@
 import React from "react";
 import { compose } from "redux";
 import { connect } from "react-redux";
-import FormTodoCard from "../component/AllForm/FormTodoCard/FormTodoCard";
-import classNames from "classnames";
-import style from "./TodoListConteiner.module.css";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import {
   deleteList as deleteListAction,
   dragEnd as dragEndAction,
 } from "../../../redux/ListItemsReducer/ListItemReducer";
 import List from "../component/List/List";
+import FormTodoCard from "../component/AllForm/FormTodoCard/FormTodoCard";
+import classNames from "classnames";
+import style from "./TodoListConteiner.module.css";
 
 // eslint-disable-next-line react/prop-types
 const TodoListContainer = ({ listItems = {}, deleteList, dragEnd }) => {

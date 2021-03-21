@@ -131,8 +131,6 @@ export default (state = listItemsInitialState, action) => {
     case CHECK_TODO: {
       const { todoId, itemId, completed } = action;
       const oldItem = state[itemId];
-      // eslint-disable-next-line no-debugger
-      debugger;
       const currentTodo = oldItem.todos.find((todo) => todo.id === todoId);
       currentTodo.completed = completed;
       const newTodo = oldItem.todos.map((todo) =>

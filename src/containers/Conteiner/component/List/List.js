@@ -2,11 +2,12 @@ import React from "react";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
-import classNames from "classnames";
-import style from "./List.module.css";
+import { Draggable } from "react-beautiful-dnd";
 import { deleteTodo as deleteOldTodo } from "../../../../redux/ListItemsReducer/ListItemReducer";
 import { checkTodo as itemCheckTodo } from "../../../../redux/ListItemsReducer/ListItemReducer";
-import { Draggable } from "react-beautiful-dnd";
+import classNames from "classnames";
+import style from "./List.module.css";
+
 // eslint-disable-next-line react/prop-types
 function List({ itemId, listItems, deleteTodo, checkTodo }) {
   const cardItem = listItems[itemId] || {};
