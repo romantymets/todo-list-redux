@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94d1d574-5c23-4df0-80e9-ed9ccd9efd6d" name="Default Changelist" comment="">
+    <list default="true" id="94d1d574-5c23-4df0-80e9-ed9ccd9efd6d" name="Default Changelist" comment="refactor drag and drop todo list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Conteiner/TodoListContiner/TodoListContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Conteiner/TodoListContiner/TodoListContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Conteiner/component/List/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Conteiner/component/List/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/TodoItemPage/TodoItemPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TodoItemPage/TodoItemPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/ListItemsReducer/ListItemReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ListItemsReducer/ListItemReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/titleReduser/titleReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/titleReduser/titleReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/titleReduser/titleTodoReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/titleReduser/titleTodoReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test-todo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testLodash" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -120,7 +124,9 @@
       <workItem from="1616084243165" duration="12618000" />
       <workItem from="1616096879875" duration="137000" />
       <workItem from="1616324543280" duration="5570000" />
-      <workItem from="1616346861341" duration="9553000" />
+      <workItem from="1616346861341" duration="10021000" />
+      <workItem from="1617091537303" duration="23000" />
+      <workItem from="1617293973531" duration="8157000" />
     </task>
     <task id="LOCAL-00001" summary="init redux">
       <created>1614617584062</created>
@@ -234,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616355594225</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="refactor drag and drop todo list">
+      <created>1616356436044</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1616356436044</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +281,7 @@
     <MESSAGE value="rformat todo" />
     <MESSAGE value="reformat todo" />
     <MESSAGE value="create drag and drop todo list" />
-    <option name="LAST_COMMIT_MESSAGE" value="create drag and drop todo list" />
+    <MESSAGE value="refactor drag and drop todo list" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor drag and drop todo list" />
   </component>
 </project>

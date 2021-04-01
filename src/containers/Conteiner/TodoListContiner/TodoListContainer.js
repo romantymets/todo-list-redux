@@ -10,6 +10,7 @@ import List from "../component/List/List";
 import FormTodoCard from "../component/AllForm/FormTodoCard/FormTodoCard";
 import classNames from "classnames";
 import style from "./TodoListConteiner.module.css";
+const _ = require("lodash");
 
 // eslint-disable-next-line react/prop-types
 const TodoListContainer = ({ listItems = {}, deleteList, dragEnd }) => {
@@ -17,9 +18,10 @@ const TodoListContainer = ({ listItems = {}, deleteList, dragEnd }) => {
     if (!result.destination) return;
     dragEnd(result, colums);
   };
-
   const colums = listItems;
-  if (colums === {}) {
+  const mylodash = _;
+  const isColumsempty = mylodash.isEmpty(colums);
+  if (isColumsempty) {
     return <div />;
   } else {
     return (

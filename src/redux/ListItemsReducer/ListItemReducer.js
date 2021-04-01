@@ -55,15 +55,14 @@ export const checkTodo = (todoId, itemId, completed) => (dispatch) => {
   });
 };
 // Reducer
+// eslint-disable-next-line import/no-anonymous-default-export
 export default (state = listItemsInitialState, action) => {
   switch (action.type) {
     case ADD_NEWLIST: {
       return { ...state, ...action.list };
     }
     case DELETE_LIST: {
-      const findIdState = Object.keys(state).filter((id) => id === action.id);
-      findIdState.toString();
-      const newState = delete state[findIdState];
+      const newState = delete state[action.id];
       return { ...state, ...newState };
     }
     case ADD_TODO: {

@@ -14,7 +14,7 @@ function List({ itemId, listItems, deleteTodo, checkTodo }) {
   const todos = cardItem.todos || [];
   const history = useHistory();
   const onItemClick = (todo) => () => {
-    history.push(`/todoitem/${todo.id}`, todo.title);
+    history.push(`/todoitem/${todo.id}`, todo);
   };
   const onItemCheck = (todoId, itemId) => (e) => {
     const completed = e.target.checked;
@@ -29,17 +29,6 @@ function List({ itemId, listItems, deleteTodo, checkTodo }) {
         <Draggable key={todo.id} draggableId={todo.id} index={index}>
           {(provided, snapshot) => {
             return (
-              // style={{
-              //   background: snapshot.isDragging
-              //     ? "blue"
-              //     : "grey",
-              //   padding: 14,
-              //   margin: 5,
-              //   minHeight: 50,
-              //   color: "white",
-              //   ...provided.draggableProps.style,
-              // }}
-
               <div
                 ref={provided.innerRef}
                 {...provided.draggableProps}

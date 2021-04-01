@@ -14,6 +14,7 @@ export const changeTodoTitle = (title, itemId) => (dispatch) => {
 };
 
 // Reducer
+// eslint-disable-next-line import/no-anonymous-default-export
 export default (state = titleTodoInitialState, action) => {
   switch (action.type) {
     case CHANGE_TODOTITLE: {
