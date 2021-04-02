@@ -1,23 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
+import { compose } from "redux";
+import { connect } from "react-redux";
+import { changeTodo as changeTodoAction } from "../../redux/ListItemsReducer/ListItemReducer";
 
-function TodoItemPage() {
+// eslint-disable-next-line react/prop-types
+function TodoItemPage({ changeTodo }) {
   const history = useHistory();
   const location = useLocation();
-  const todo = location.state;
-  const { title, id } = todo;
-  console.log(id);
-  const goBack = () => history.goBack();
+  const todos = location.state;
+  const getTodos = todos || {
+    title: "",
+    id: "",
+    itemId: "",
+    index: "",
+    listName: "",
+  };
+  const { title, id, itemId, index, listName } = getTodos;
+  const [titleArea, chengetitleArea] = useState(title);
+  const onChangeTextArea = (e) => {
+    const text = e.target.value;
+    chengetitleArea(text);
+  };
+  const goBack = () => {
+    changeTodo(itemId, id, titleArea);
+    history.goBack();
+    chengetitleArea("");
+  };
 
   return (
     <div className="container">
       <div className="card">
-        <div className="card-header">TODO</div>
+        <div className="card-header">
+          <h5> List Name: {listName}</h5>
+        </div>
         <div className="card-body">
-          <h5 className="card-title"> Change todo </h5>
+          <h5 className="card-title"> Change todo: {index + 1} </h5>
           <div className="form-floating">
-            <textarea className="form-control" placeholder="chose uor todo">
-              {title}
+            <textarea
+              className="form-control"
+              placeholder="chose uor todo"
+              onChange={onChangeTextArea}
+            >
+              {titleArea}
             </textarea>
           </div>
           <br />
@@ -30,4 +55,13 @@ function TodoItemPage() {
   );
 }
 
-export default TodoItemPage;
+export default compose(
+  connect(
+    (state) => ({
+      listItems: state.listItems,
+    }),
+    {
+      changeTodo: changeTodoAction,
+    }
+  )
+)(TodoItemPage);

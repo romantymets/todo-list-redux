@@ -68,7 +68,7 @@ const TodoListContainer = ({ listItems = {}, deleteList, dragEnd }) => {
                               : "#ebecf0",
                           }}
                         >
-                          <List itemId={id} />
+                          <List itemId={id} listName={column.name} />
                           {provided.placeholder}
                         </div>
                       );

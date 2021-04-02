@@ -9,12 +9,12 @@ import classNames from "classnames";
 import style from "./List.module.css";
 
 // eslint-disable-next-line react/prop-types
-function List({ itemId, listItems, deleteTodo, checkTodo }) {
+function List({ itemId, listItems, deleteTodo, checkTodo, listName }) {
   const cardItem = listItems[itemId] || {};
   const todos = cardItem.todos || [];
   const history = useHistory();
-  const onItemClick = (todo) => () => {
-    history.push(`/todoitem/${todo.id}`, todo);
+  const onItemClick = (todo, index) => () => {
+    history.push(`/todoitem/${todo.id}`, { ...todo, itemId, index, listName });
   };
   const onItemCheck = (todoId, itemId) => (e) => {
     const completed = e.target.checked;
@@ -67,7 +67,7 @@ function List({ itemId, listItems, deleteTodo, checkTodo }) {
                           e.stopPropagation();
                         }}
                       />
-                      <span onClick={onItemClick(todo)} className="h6">
+                      <span onClick={onItemClick(todo, index)} className="h6">
                         {" "}
                         {todo.title}
                       </span>

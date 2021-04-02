@@ -1,4 +1,5 @@
 const ROOT_PREFIX = "LIST/";
+const TODO_PREFIX = "TODO/";
 
 const listItemsInitialState = {};
 export { listItemsInitialState };
@@ -6,10 +7,11 @@ export { listItemsInitialState };
 // Actions
 export const ADD_NEWLIST = `${ROOT_PREFIX}ADD_NEWLIST`;
 export const DELETE_LIST = `${ROOT_PREFIX}DELETE_LIST`;
-export const ADD_TODO = `${ROOT_PREFIX}ADD_TODO`;
-export const DELETE_TODO = `${ROOT_PREFIX}DELETE_TODO`;
-export const CHECK_TODO = `${ROOT_PREFIX}CHECK_TODO`;
-export const ONDRAG_END = `${ROOT_PREFIX}ONDRAG_END`;
+export const ADD_TODO = `${TODO_PREFIX}ADD_TODO`;
+export const DELETE_TODO = `${TODO_PREFIX}DELETE_TODO`;
+export const CHECK_TODO = `${TODO_PREFIX}CHECK_TODO`;
+export const ONDRAG_END = `${TODO_PREFIX}ONDRAG_END`;
+export const TODOITEM_CHANGE = `${TODO_PREFIX}TODOITEM_CHANGE`;
 
 export const addNewList = (list) => (dispatch) => {
   dispatch({
@@ -52,6 +54,14 @@ export const checkTodo = (todoId, itemId, completed) => (dispatch) => {
     todoId,
     itemId,
     completed,
+  });
+};
+export const changeTodo = (listId, todoId, changedTitle) => (dispatch) => {
+  dispatch({
+    type: TODOITEM_CHANGE,
+    listId,
+    todoId,
+    changedTitle,
   });
 };
 // Reducer
@@ -143,6 +153,29 @@ export default (state = listItemsInitialState, action) => {
         ...state,
         [itemId]: newItem,
       };
+    }
+    case TODOITEM_CHANGE: {
+      const { listId, todoId, changedTitle } = action;
+      if (!listId || !todoId || !changedTitle) {
+        return state;
+      } else {
+        const oldItemList = state[listId];
+        const currentTodo = oldItemList.todos.find(
+          (todo) => todo.id === todoId
+        );
+        currentTodo.title = changedTitle;
+        const newTodo = oldItemList.todos.map((todo) =>
+          todo.id === todoId ? currentTodo : todo
+        );
+        const newItem = {
+          ...oldItemList,
+          todos: [...newTodo],
+        };
+        return {
+          ...state,
+          [listId]: newItem,
+        };
+      }
     }
     default:
       return state;
