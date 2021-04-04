@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94d1d574-5c23-4df0-80e9-ed9ccd9efd6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/containers/Todo/Form.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TodoInprocesForm/Form.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Todo/FormConteiner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TodoInprocesForm/FormConteiner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Todo/TodoContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TodoInprocesForm/TodoContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Todo/component/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TodoInprocesForm/component/Footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Todo/component/List/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TodoInprocesForm/component/List/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Todo/component/List/List.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TodoCompledForm/List/List.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/TodoCompled/List/List.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TodoInprocesForm/component/List/List.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/TodoCompled/List/ListCompleted.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TodoCompledForm/List/ListCompleted.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/TodoCompled/TodoCompletedForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TodoCompledForm/TodoCompletedForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/TodoCompled/TodoCompletedForm.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TodoCompledForm/TodoCompletedForm.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/TodoItemPage/TodoItemPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TodoItemPage/TodoItemPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ListItemsReducer/ListItemReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ListItemsReducer/ListItemReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="update_todo" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,15 +33,18 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/containers/TodoCompled" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../todo-hooks" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.jscs" value="" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
@@ -57,16 +52,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/containers/TodoCompled" />
-      <recent name="$PROJECT_DIR$/src/images" />
-      <recent name="$PROJECT_DIR$/src/containers/Todo/component/Footer" />
-      <recent name="$PROJECT_DIR$/src/redux/deleteTodoReduser" />
+      <recent name="$PROJECT_DIR$/src/containers/Conteiner/component/AllForm/FormTodoCard" />
       <recent name="$PROJECT_DIR$/src/redux/titleReduser" />
+      <recent name="$PROJECT_DIR$/src/redux" />
+      <recent name="$PROJECT_DIR$/src/containers/Conteiner/TodoListContiner" />
+      <recent name="$PROJECT_DIR$/src/containers/TodoCompled" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/redux" />
-      <recent name="$PROJECT_DIR$/src/pages/MainPage" />
-      <recent name="$PROJECT_DIR$/src/pages/AboutPage" />
+      <recent name="$PROJECT_DIR$/src/containers/Conteiner/component/AllForm" />
+      <recent name="$PROJECT_DIR$/src/containers/Conteiner/component/AllForm/FormList" />
+      <recent name="$PROJECT_DIR$/src/containers/Conteiner/component" />
+      <recent name="$PROJECT_DIR$/src/containers/Conteiner" />
+      <recent name="$PROJECT_DIR$/src/containers/TodoInprocesForm/component/Form" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -80,6 +77,16 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="FormList.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/containers/Conteiner/component/AllForm/FormList/FormList.js" working-dir="$PROJECT_DIR$/src/containers/Conteiner/component/AllForm">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.FormList.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -105,7 +112,22 @@
       <workItem from="1615192928774" duration="8600000" />
       <workItem from="1615216123273" duration="761000" />
       <workItem from="1615307201596" duration="12810000" />
-      <workItem from="1615396000752" duration="7038000" />
+      <workItem from="1615396000752" duration="7186000" />
+      <workItem from="1615404743993" duration="144000" />
+      <workItem from="1615406327245" duration="291000" />
+      <workItem from="1615615724170" duration="624000" />
+      <workItem from="1615719838733" duration="618000" />
+      <workItem from="1615999510923" duration="10911000" />
+      <workItem from="1616084243165" duration="12618000" />
+      <workItem from="1616096879875" duration="137000" />
+      <workItem from="1616324543280" duration="5570000" />
+      <workItem from="1616346861341" duration="10021000" />
+      <workItem from="1617091537303" duration="23000" />
+      <workItem from="1617293973531" duration="8193000" />
+      <workItem from="1617350433385" duration="2806000" />
+      <workItem from="1617353267415" duration="428000" />
+      <workItem from="1617353718654" duration="9495000" />
+      <workItem from="1617519350121" duration="1660000" />
     </task>
     <task id="LOCAL-00001" summary="init redux">
       <created>1614617584062</created>
@@ -191,7 +213,56 @@
       <option name="project" value="LOCAL" />
       <updated>1615404156037</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added done todo_list">
+      <created>1615404344805</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1615404344805</updated>
+    </task>
+    <task id="LOCAL-00014" summary="rformat todo">
+      <created>1616096958016</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1616096958016</updated>
+    </task>
+    <task id="LOCAL-00015" summary="reformat todo">
+      <created>1616349001207</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1616349001207</updated>
+    </task>
+    <task id="LOCAL-00016" summary="create drag and drop todo list">
+      <created>1616355594225</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1616355594225</updated>
+    </task>
+    <task id="LOCAL-00017" summary="refactor drag and drop todo list">
+      <created>1616356436044</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1616356436044</updated>
+    </task>
+    <task id="LOCAL-00018" summary="refactor code">
+      <created>1617302153900</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1617302153900</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added change todo item in my list">
+      <created>1617363207167</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1617363207167</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,12 +287,17 @@
     <MESSAGE value="add newTools" />
     <MESSAGE value="added todos reducer and refactor code" />
     <MESSAGE value="delete todo" />
-    <MESSAGE value="refactor code" />
     <MESSAGE value="add todoitem navigation" />
     <MESSAGE value="reformat code" />
     <MESSAGE value="new branch" />
     <MESSAGE value="update my todo" />
     <MESSAGE value="added done todo_list" />
-    <option name="LAST_COMMIT_MESSAGE" value="added done todo_list" />
+    <MESSAGE value="rformat todo" />
+    <MESSAGE value="reformat todo" />
+    <MESSAGE value="create drag and drop todo list" />
+    <MESSAGE value="refactor drag and drop todo list" />
+    <MESSAGE value="refactor code" />
+    <MESSAGE value="added change todo item in my list" />
+    <option name="LAST_COMMIT_MESSAGE" value="added change todo item in my list" />
   </component>
 </project>

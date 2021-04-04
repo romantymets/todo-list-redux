@@ -1,0 +1,58 @@
+.todoContainer {
+    display: flex;
+    flex-direction: column;
+    background: #ebecf0;
+    border-radius: 10px;
+    margin: 20px ;
+    width: 300px;
+    min-height: 650px;
+    padding: 0 auto;
+}
+.droppableContainer{
+    padding: 0;
+    min-width: 300px;
+    border-radius: 5px;
+    min-height: 650px;
+    margin-left: -15px;
+}
+.dropContainer {
+    width: 100%;
+}
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.buttonSubmit {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttonLoadMore {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.list {
+    display: flex;
+    flex-direction: row;
+}
+
+.button{
+    border-radius: 20%;
+    display: flex;
+    justify-content: right;
+    cursor:pointer;
+    margin-left: 255px;
+    margin-top: -30px;
+
+}
+.button:hover {
+    transform: scale(1);
+    transition-duration: 1s;
+}

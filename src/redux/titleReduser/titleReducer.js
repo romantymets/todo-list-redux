@@ -13,6 +13,7 @@ export const changeTitle = (title) => (dispatch) => {
 };
 
 // Reducer
+// eslint-disable-next-line import/no-anonymous-default-export
 export default (state = titleInitialState, action) => {
   switch (action.type) {
     case CHANGE_TITLE: {

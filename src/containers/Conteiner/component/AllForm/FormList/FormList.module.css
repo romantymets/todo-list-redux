@@ -1,12 +1,11 @@
 .todoContainer {
     display: flex;
     flex-direction: column;
-    background: #ebecf0;
-    width:400px;
+    justify-content: flex-start;
+    width:auto;
     border-radius: 10px;
-    justify-content: left;
-    margin-top: 50px ;
-    margin-left: 100px;
+    margin-top: 20px;
+    margin-left: 50px;
 }
 
 .formContainer {
