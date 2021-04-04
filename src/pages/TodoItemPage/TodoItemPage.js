@@ -2,28 +2,28 @@ import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import { compose } from "redux";
 import { connect } from "react-redux";
-import { changeTodo as changeTodoAction } from "../../redux/ListItemsReducer/ListItemReducer";
+import { todoItemChange as todoItemChangeAction } from "../../redux/ListItemsReducer/ListItemReducer";
 
 // eslint-disable-next-line react/prop-types
-function TodoItemPage({ changeTodo }) {
+function TodoItemPage({ todoItemChange }) {
   const history = useHistory();
   const location = useLocation();
   const todos = location.state;
-  const getTodos = todos || {
+  const todoToEdit = todos || {
     title: "",
     id: "",
     itemId: "",
     index: "",
     listName: "",
   };
-  const { title, id, itemId, index, listName } = getTodos;
+  const { title, id, itemId, index, listName } = todoToEdit;
   const [titleArea, chengetitleArea] = useState(title);
   const onChangeTextArea = (e) => {
     const text = e.target.value;
     chengetitleArea(text);
   };
   const goBack = () => {
-    changeTodo(itemId, id, titleArea);
+    todoItemChange(itemId, id, titleArea);
     history.goBack();
     chengetitleArea("");
   };
@@ -61,7 +61,7 @@ export default compose(
       listItems: state.listItems,
     }),
     {
-      changeTodo: changeTodoAction,
+      todoItemChange: todoItemChangeAction,
     }
   )
 )(TodoItemPage);

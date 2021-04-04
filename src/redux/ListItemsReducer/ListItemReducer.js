@@ -56,7 +56,7 @@ export const checkTodo = (todoId, itemId, completed) => (dispatch) => {
     completed,
   });
 };
-export const changeTodo = (listId, todoId, changedTitle) => (dispatch) => {
+export const todoItemChange = (listId, todoId, changedTitle) => (dispatch) => {
   dispatch({
     type: TODOITEM_CHANGE,
     listId,
