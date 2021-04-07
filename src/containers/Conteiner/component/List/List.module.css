@@ -4,11 +4,11 @@
 }
 
 .listItem {
-  width: 100%;
-  margin: 1px;
-  margin-top: 10px;
+  width: 90%;
+  margin: 5px 5px 5px 12px;
   padding: 5px;
-  display: block;
+  display: flex;
+ flex-direction: column;
   font-size: 120%;
 }
 .listItem:hover{
@@ -46,14 +46,32 @@
 }
 .header {
    background: #ebecf0;
-  display: flex;
+   display: flex;
   justify-content: space-between;
+  height: 40px;
+  margin: 1px 1px 1px 1px;
 }
 .titleBody{
   display: flex;
- flex-direction: column;
+    flex-direction: row;
+    align-items: flex-start;
+  height: 10px;
   margin: 2px;
+}
+.titleBody>*:first-child {
+margin-top: 4px;
+}
+.titleText{
+    min-width: 30px;
+    overflow: hidden;
+    min-height: 25px;
+    padding: 3px;
 }
 .titleText:hover {
   cursor:pointer;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: row;
 }

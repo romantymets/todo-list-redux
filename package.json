@@ -29,6 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "https://tymets-todo-api.herokuapp.com",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -38,7 +39,13 @@
       "plugin:react/recommended",
       "plugin:react-hooks/recommended",
       "plugin:prettier/recommended"
-    ]
+    ],
+    "rules": {
+      "no-debugger": 0,
+      "eqeqeq": "off",
+      "no-unused-vars": "off",
+      "react/prop-types": 0
+    }
   },
   "browserslist": {
     "production": [

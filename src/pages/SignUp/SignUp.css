@@ -1,0 +1,13 @@
+.LogUpContainer {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.FormContainer {
+width: 40%;
+}
+.register {
+    color: #fefff9;
+    display: flex;
+    justify-content: center;
+}

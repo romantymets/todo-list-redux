@@ -1,6 +1,6 @@
 .nav-item {
     text-transform: uppercase;
-    margin-left: 50px;
+    margin-left: 20px;
     text-decoration-color: #f8f9fa;
 }
 .nav-item span {
@@ -14,7 +14,6 @@
     border-radius: 5px;
     color:black;
 }
-
 .image{
     font-size: 120%;
 }
@@ -44,4 +43,13 @@ background-image: none;
 }
 .navbar-toggler-icon{
  background-image: none;
+}
+.my li:nth-child(6):hover span {
+   color: red;
+}
+.my li:nth-child(5):hover span {
+    color: lightgreen;
+}
+.my li:nth-child(4):hover span {
+    color: lightgreen;
 }

@@ -1,0 +1,8 @@
+.LogInContainer {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.FormContainer {
+width: 40%;
+}

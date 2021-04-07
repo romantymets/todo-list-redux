@@ -59,7 +59,7 @@ function NavBar() {
           className={`collapse navbar-collapse ${showBar ? "show" : null}`}
           id="navbarSupportedContent"
         >
-          <ul className="navbar-nav ml-auto">
+          <ul className="navbar-nav ml-auto my">
             <li className="nav-item active">
               <Link to="/todoitem/:id" className="nav-link">
                 {" "}
@@ -88,6 +88,24 @@ function NavBar() {
                   <FaHome />{" "}
                 </span>{" "}
                 <span className="textColor"> Home</span>{" "}
+                <span className="sr-only">(current)</span>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/signup" className="nav-link">
+                <span className="textColor"> sign up</span>{" "}
+                <span className="sr-only">(current)</span>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/signin" className="nav-link">
+                <span className="textColor"> Sign in</span>{" "}
+                <span className="sr-only">(current)</span>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link">
+                <span className="textColor"> Log Out</span>{" "}
                 <span className="sr-only">(current)</span>
               </Link>
             </li>

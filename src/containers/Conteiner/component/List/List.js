@@ -54,24 +54,23 @@ function List({ itemId, listItems, deleteTodo, checkTodo, listName }) {
                     className={classNames(
                       "card-title",
                       style.titleBody,
-                      `${todo.completed ? style.doneTodo : null}`
+                      `${todo.completed ? style.doneTodo : null}`,
+                      style.titleText
                     )}
                   >
-                    <div className={style.titleText}>
-                      <input
-                        type="checkbox"
-                        checked={todo.completed}
-                        className={style.checkboxContainer}
-                        onChange={onItemCheck(todo.id, itemId)}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                        }}
-                      />
-                      <span onClick={onItemClick(todo, index)} className="h6">
-                        {" "}
-                        {todo.title}
-                      </span>
-                    </div>
+                    <input
+                      type="checkbox"
+                      checked={todo.completed}
+                      className={style.checkboxContainer}
+                      onChange={onItemCheck(todo.id, itemId)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                      }}
+                    />
+                    <span onClick={onItemClick(todo, index)} className="h6">
+                      {" "}
+                      {todo.title}
+                    </span>
                   </div>
                 </div>
               </div>

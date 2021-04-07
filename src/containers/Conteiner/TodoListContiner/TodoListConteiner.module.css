@@ -3,17 +3,22 @@
     flex-direction: column;
     background: #ebecf0;
     border-radius: 10px;
-    margin: 20px ;
+    margin: 5px 5px 5px 10px;
     width: 300px;
-    min-height: 650px;
+    max-width: 300px;
+    min-height: 370px;
+    max-height: 605px;
     padding: 0 auto;
 }
 .droppableContainer{
     padding: 0;
     min-width: 300px;
     border-radius: 5px;
-    min-height: 650px;
+    min-height: 370px;
     margin-left: -15px;
+    max-height: 605px;
+    max-width: 300px;
+    overflow: auto;
 }
 .dropContainer {
     width: 100%;
@@ -41,6 +46,7 @@
 .list {
     display: flex;
     flex-direction: row;
+    overflow: scroll;
 }
 
 .button{

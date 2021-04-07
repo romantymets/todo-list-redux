@@ -7,6 +7,8 @@ import MainPage from "./pages/MainPage/MainPage";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import NavBar from "./NavBar/NavBar";
 import TodoItemPage from "./pages/TodoItemPage/TodoItemPage";
+import SignUp from "./pages/SignUp/SignUp";
+import SignIn from "./pages/SignIn/SignIn";
 import "./App.css";
 
 function App() {
@@ -18,6 +20,12 @@ function App() {
           <Switch>
             <Route path="/about">
               <AboutPage />
+            </Route>
+            <Route path="/signin">
+              <SignIn />
+            </Route>
+            <Route path="/signup">
+              <SignUp />
             </Route>
             <Route path="/todoitem/:id">
               <TodoItemPage />
