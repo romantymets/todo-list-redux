@@ -1,15 +1,22 @@
 const ROOT_PREFIX = "TOKEN/";
 
-const tokenInitialState = {};
+const tokenInitialState = { token: "", user: null };
 export { tokenInitialState };
 
 // Actions
-export const TAKE_TOKEN = `${ROOT_PREFIX}TAKE_TOKEN`;
+export const SET_TOKEN = `${ROOT_PREFIX}SET_TOKEN`;
+export const SET_USER = `${ROOT_PREFIX}SET_USER`;
 
-export const takeToken = (token) => (dispatch) => {
+export const setToken = (token) => (dispatch) => {
   dispatch({
-    type: TAKE_TOKEN,
+    type: SET_TOKEN,
     token,
+  });
+};
+export const setUser = (user) => (dispatch) => {
+  dispatch({
+    type: SET_USER,
+    user,
   });
 };
 
@@ -17,9 +24,11 @@ export const takeToken = (token) => (dispatch) => {
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (state = tokenInitialState, action) => {
   switch (action.type) {
-    case TAKE_TOKEN: {
-      const newState = { ...action.token };
-      return newState;
+    case SET_TOKEN: {
+      return { ...state, token: action.token };
+    }
+    case SET_USER: {
+      return { ...state, user: action.user };
     }
     default:
       return state;

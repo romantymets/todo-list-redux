@@ -1,16 +1,24 @@
 import React from "react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { compose } from "redux";
+import { connect } from "react-redux";
 import { FaHome, FaAngular } from "react-icons/fa";
 import { FcTodoList } from "react-icons/fc";
 import { RiMastodonLine } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
+import isEmpty from "lodash/isEmpty";
 import "./Navbar.css";
+import {
+  setToken as setTokenAction,
+  setUser as setUserAction,
+} from "../redux/registrationReduser/RegistrationReducer";
 
-function NavBar() {
+function NavBar({ token, user, setToken, setUser }) {
+  const { profile } = user || {};
+  const { firstName, lastName } = profile || {};
   const wrapperRef = useRef(null);
   const [showBar, setShowBar] = useState(false);
-
   useEffect(() => {
     function handleClickOutside(event) {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
@@ -29,7 +37,18 @@ function NavBar() {
   const onButtonClick = () => {
     setShowBar(!showBar);
   };
-
+  useEffect(() => {
+    const localStorageUser = localStorage.getItem("user");
+    const localStorageToken = localStorage.getItem("token");
+    setUser(JSON.parse(localStorageUser));
+    setToken(localStorageToken);
+  }, []);
+  const clearTocken = () => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    setUser(null);
+    setToken("");
+  };
   return (
     <div className="container">
       <nav className="navbar navbar-expand-md " ref={wrapperRef}>
@@ -104,16 +123,31 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link">
-                <span className="textColor"> Log Out</span>{" "}
-                <span className="sr-only">(current)</span>
-              </Link>
+              <span className="textColor" onClick={clearTocken}>
+                {" "}
+                Log Out
+              </span>{" "}
+              <span className="sr-only">(current)</span>
             </li>
           </ul>
+        </div>
+        <div className="loginPerson">
+          <h2> {profile ? `${firstName} ${lastName}` : ""}</h2>
         </div>
       </nav>
     </div>
   );
 }
 
-export default NavBar;
+export default compose(
+  connect(
+    (state) => ({
+      token: state.tokenState.token,
+      user: state.tokenState.user,
+    }),
+    {
+      setToken: setTokenAction,
+      setUser: setUserAction,
+    }
+  )
+)(NavBar);

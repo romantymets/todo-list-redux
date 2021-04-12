@@ -24,13 +24,23 @@
 
 .navbar {
     background: none;
+    display: flex;
+    align-items: center;
 }
-.textColor{
+.loginPerson{
+    margin: 0px 10px 0px 40px;
+    display: flex;
+    flex: 1 1 auto;
+    padding: 1px;
+}
+.loginPerson h2 {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1px 0px 1px 1px;
+    font-size: 100%;
+    color: lightgreen;
+}
 
-}
-.textColor:hover{
-
-}
 .navbar-brand{
     color: white;
 }

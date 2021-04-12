@@ -3,11 +3,13 @@ import { useHistory } from "react-router-dom";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import Api from "../../api/Api";
-import { takeToken as takeTokenAction } from "../../redux/registrationReduser/RegistrationReducer";
+import {
+  setToken as setTokenAction,
+  setUser as setUserAction,
+} from "../../redux/registrationReduser/RegistrationReducer";
 import "./SignUp.css";
 
-const SignUp = ({ takeToken }) => {
-  const [token, settoken] = useState({});
+const SignUp = ({ setToken, setUser }) => {
   const [email, setEmail] = useState("");
   const [password, setpassword] = useState("");
   const [firstName, setName] = useState("");
@@ -15,6 +17,7 @@ const SignUp = ({ takeToken }) => {
   const [disableButton, setDisableButton] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const history = useHistory();
+
   const EmailChange = (e) => {
     const data = e.target.value;
     setEmail(data);
@@ -42,10 +45,13 @@ const SignUp = ({ takeToken }) => {
     })
       .then((response) => {
         const { data } = response;
-        settoken({ ...data });
+        const { user, token } = data;
         setDisableButton(false);
         setShowMessage(true);
-        takeToken(token);
+        setToken(token);
+        setUser(user);
+        localStorage.setItem("token", token);
+        localStorage.setItem("user", JSON.stringify(user));
       })
       .catch((error) => {
         alert(error.message);
@@ -54,14 +60,14 @@ const SignUp = ({ takeToken }) => {
   };
   const goLogin = () => {
     setShowMessage(false);
-    history.push("/signin");
+    history.push("/");
   };
   return (
     <div>
       {showMessage ? (
         <div>
           <h5> registration successful </h5>
-          <button className="btn btn-primary" onClick={goLogin}>
+          <button className="btn btn-primary" onClick={() => goLogin}>
             log in
           </button>
         </div>
@@ -136,12 +142,8 @@ const SignUp = ({ takeToken }) => {
 };
 
 export default compose(
-  connect(
-    (state) => ({
-      initialToken: state.token,
-    }),
-    {
-      takeToken: takeTokenAction,
-    }
-  )
+  connect(null, {
+    setToken: setTokenAction,
+    setUser: setUserAction,
+  })
 )(SignUp);

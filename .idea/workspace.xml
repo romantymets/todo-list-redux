@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="94d1d574-5c23-4df0-80e9-ed9ccd9efd6d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/NavBar/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NavBar/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/NavBar/Navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SignIn/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignIn/SignIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignUp/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/registrationReduser/RegistrationReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/registrationReduser/RegistrationReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,6 +131,9 @@
       <workItem from="1617353267415" duration="428000" />
       <workItem from="1617353718654" duration="9495000" />
       <workItem from="1617519350121" duration="1660000" />
+      <workItem from="1617985160922" duration="397000" />
+      <workItem from="1618147910014" duration="10332000" />
+      <workItem from="1618247225144" duration="3898000" />
     </task>
     <task id="LOCAL-00001" summary="init redux">
       <created>1614617584062</created>
@@ -267,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617824296577</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="new branch">
+      <created>1617824359395</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1617824359395</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +309,6 @@
     <MESSAGE value="delete todo" />
     <MESSAGE value="add todoitem navigation" />
     <MESSAGE value="reformat code" />
-    <MESSAGE value="new branch" />
     <MESSAGE value="update my todo" />
     <MESSAGE value="added done todo_list" />
     <MESSAGE value="rformat todo" />
@@ -304,6 +318,7 @@
     <MESSAGE value="refactor code" />
     <MESSAGE value="added change todo item in my list" />
     <MESSAGE value="add  sign up" />
-    <option name="LAST_COMMIT_MESSAGE" value="add  sign up" />
+    <MESSAGE value="new branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="new branch" />
   </component>
 </project>
