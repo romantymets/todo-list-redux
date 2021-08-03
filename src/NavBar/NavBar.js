@@ -33,7 +33,7 @@ function NavBar() {
   return (
     <div className="container-fluid">
       <nav className="navbar navbar-expand-md " ref={wrapperRef}>
-        <Link to="/" className="navbar-brand">
+        <Link to="/todo-list-redux" className="navbar-brand">
           {" "}
           MyTODO{" "}
           <span className="image">
