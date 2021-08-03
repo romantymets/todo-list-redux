@@ -31,7 +31,7 @@ function NavBar() {
   };
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <nav className="navbar navbar-expand-md " ref={wrapperRef}>
         <Link to="/" className="navbar-brand">
           {" "}
