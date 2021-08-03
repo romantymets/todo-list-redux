@@ -18,19 +18,19 @@ function App() {
         <Router>
           <NavBar />
           <Switch>
-            <Route path="/about">
+            <Route path="/todo-list-redux/about">
               <AboutPage />
             </Route>
-            <Route path="/signin">
+            <Route path="/todo-list-redux/signin">
               <SignIn />
             </Route>
-            <Route path="/signup">
+            <Route path="/todo-list-redux/signup">
               <SignUp />
             </Route>
-            <Route path="/todoitem/:id">
+            <Route path="/todo-list-redux/todoitem/:id">
               <TodoItemPage />
             </Route>
-            <Route exact path="/">
+            <Route exact path="/todo-list-redux">
               <MainPage />
             </Route>
           </Switch>

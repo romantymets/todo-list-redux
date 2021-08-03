@@ -14,7 +14,7 @@ function List({ itemId, listItems, deleteTodo, checkTodo, listName }) {
   const todos = cardItem.todos || [];
   const history = useHistory();
   const onItemClick = (todo, index) => () => {
-    history.push(`/todoitem/${todo.id}`, { ...todo, itemId, index, listName });
+    history.push(`/todo-list-redux/todoitem/${todo.id}`, { ...todo, itemId, index, listName });
   };
   const onItemCheck = (todoId, itemId) => (e) => {
     const completed = e.target.checked;

@@ -61,7 +61,7 @@ function NavBar() {
         >
           <ul className="navbar-nav ml-auto my">
             <li className="nav-item active">
-              <Link to="/todoitem/:id" className="nav-link">
+              <Link to="/todo-list-redux/todoitem/:id" className="nav-link">
                 {" "}
                 <span className="image">
                   {" "}
@@ -72,7 +72,7 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link">
+              <Link to="/todo-list-redux/about" className="nav-link">
                 {" "}
                 <span className="image">
                   <FaAngular />{" "}
@@ -82,7 +82,7 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/" className="nav-link">
+              <Link to="/todo-list-redux/" className="nav-link">
                 {" "}
                 <span className="image">
                   <FaHome />{" "}
@@ -92,13 +92,13 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/signup" className="nav-link">
+              <Link to="/todo-list-redux/signup" className="nav-link">
                 <span className="textColor"> sign up</span>{" "}
                 <span className="sr-only">(current)</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/signin" className="nav-link">
+              <Link to="/todo-list-redux/signin" className="nav-link">
                 <span className="textColor"> Sign in</span>{" "}
                 <span className="sr-only">(current)</span>
               </Link>
