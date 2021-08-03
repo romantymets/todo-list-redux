@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94d1d574-5c23-4df0-80e9-ed9ccd9efd6d" name="Default Changelist" comment="refactor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="94d1d574-5c23-4df0-80e9-ed9ccd9efd6d" name="Default Changelist" comment="refactor" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="update_todo" />
+        <entry key="$PROJECT_DIR$" value="registrations" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,6 +80,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.FormList.js" />
+        <item itemvalue="Node.js.FormList.js" />
         <item itemvalue="Node.js.FormList.js" />
       </list>
     </recent_temporary>
