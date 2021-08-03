@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94d1d574-5c23-4df0-80e9-ed9ccd9efd6d" name="Default Changelist" comment="added change todo item in my list">
+    <list default="true" id="94d1d574-5c23-4df0-80e9-ed9ccd9efd6d" name="Default Changelist" comment="refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/NavBar/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NavBar/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/NavBar/Navbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,19 +49,19 @@
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/containers/Conteiner/component/AllForm/FormTodoCard" />
-      <recent name="$PROJECT_DIR$/src/redux/titleReduser" />
-      <recent name="$PROJECT_DIR$/src/redux" />
-      <recent name="$PROJECT_DIR$/src/containers/Conteiner/TodoListContiner" />
-      <recent name="$PROJECT_DIR$/src/containers/TodoCompled" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/containers/Conteiner/component/AllForm" />
       <recent name="$PROJECT_DIR$/src/containers/Conteiner/component/AllForm/FormList" />
       <recent name="$PROJECT_DIR$/src/containers/Conteiner/component" />
       <recent name="$PROJECT_DIR$/src/containers/Conteiner" />
       <recent name="$PROJECT_DIR$/src/containers/TodoInprocesForm/component/Form" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/containers/Conteiner/component/AllForm/FormTodoCard" />
+      <recent name="$PROJECT_DIR$/src/redux/titleReduser" />
+      <recent name="$PROJECT_DIR$/src/redux" />
+      <recent name="$PROJECT_DIR$/src/containers/Conteiner/TodoListContiner" />
+      <recent name="$PROJECT_DIR$/src/containers/TodoCompled" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -266,7 +260,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617363207167</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="refactor">
+      <created>1628007437184</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1628007437184</updated>
+    </task>
+    <task id="LOCAL-00021" summary="refactor">
+      <created>1628007478079</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1628007478079</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,6 +310,7 @@
     <MESSAGE value="refactor drag and drop todo list" />
     <MESSAGE value="refactor code" />
     <MESSAGE value="added change todo item in my list" />
-    <option name="LAST_COMMIT_MESSAGE" value="added change todo item in my list" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
 </project>
